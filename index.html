@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Burst</title>
+    <!-- tailwind and daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- lato google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- tailwind custom color -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .font-lato {
+            font-family: 'Lato', sans-serif;
+
+        }
+    </style>
+
+</head>
+
+<body class="font-lato">
+    <header>
+        <section class="w-11/12 mx-auto my-10">
+            <!-- first nav -->
+            <nav class=" h-20 lg:flex hidden justify-around rounded-full bg-[#F85559]">
+                <div class="flex gap-4 items-center text-white">
+                    <div>Home</div>
+                    <div>About Us</div>
+                    <div>Shop</div>
+                    <div>All Fruits</div>
+                </div>
+                <div class="flex items-center">
+                    <div><img src="images/logo.png" alt=""></div>
+                    <div class="text-4xl font-bold text-white">Fruit Burst</div>
+                </div>
+                <div class="flex items-center relative">
+                    <input class="rounded-full pl-2 h-10" placeholder="Search here ">
+                </div>
+                <div class="absolute top-[70px] right-[170px]">
+                    <img src="images/Frame.svg" alt="">
+                </div>
+            </nav>
+            <!-- second nav -->
+            <nav class="lg:hidden block">
+                <div class="flex justify-between">
+                    <div class="flex gap-3">
+                        <img src="images/logo.png" alt="">
+                        <h2 class="text-lg font-bold flex items-center">Fruit Burst</h2>
+                    </div>
+                    <div>
+                        <img src="images/Frame 2.svg" alt="">
+                    </div>
+                </div>
+            </nav>
+
+        </section>
+
+        <!-- carousel -->
+
+        <div class="carousel w-11/12 mx-auto flex h-[75vh] relative sm:rounded-md">
+            <!-- Slide 01 -->
+            <div id="slide1" class="carousel-item relative w-full">
+                <div class="bg-red-400 w-full h-[100%] flex justify-center items-center">
+                    <div class="hero h-full" style="background-image: url(./images/banner1.png);">
+                        <div class="hero-overlay bg-opacity-50"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md text-white">
+                                <h1 class="mb-5 text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
+                                <p class="mb-5">We supply highly quality organic products</p>
+                                <button
+                                    class="btn bg-[#F85559] text-white hover:bg-transparent hover:text-primary hover:border-primary">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4"
+                        class="btn btn-circle hover:bg-primary hover:border-primary hover:text-white">❮</a>
+                    <a href="#slide2"
+                        class="btn btn-circle hover:bg-primary hover:border-primary hover:text-white">❯</a>
+                </div>
+            </div>
+
+            <!-- Slide 02 -->
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="bg-red-400 w-full h-[100%] flex justify-center items-center">
+                    <div class="hero h-full" style="background-image: url(./images/banner2.png);">
+                        <div class="hero-overlay bg-opacity-50"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md text-white">
+                                <h1 class="mb-5 text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
+                                <p class="mb-5">We supply highly quality organic products</p>
+                                <button
+                                    class="btn bg-[#F85559] text-white hover:bg-transparent hover:text-primary hover:border-primary">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1"
+                        class="btn btn-circle hover:bg-primary hover:border-primary hover:text-white">❮</a>
+                    <a href="#slide3"
+                        class="btn btn-circle hover:bg-primary hover:border-primary hover:text-white">❯</a>
+                </div>
+            </div>
+
+            <!-- Slide 03 -->
+            <div id="slide3" class="carousel-item relative w-full">
+                <div class="bg-red-400 w-full h-[100%] flex justify-center items-center">
+                    <div class="hero h-full" style="background-image: url(./images/banner3.png);">
+                        <div class="hero-overlay bg-opacity-50"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md text-white">
+                                <h1 class="mb-5 text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
+                                <p class="mb-5">We supply highly quality organic products</p>
+                                <button
+                                    class="btn bg-[#F85559] text-white hover:bg-transparent hover:text-primary hover:border-primary">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2"
+                        class="btn btn-circle hover:bg-primary hover:border-primary hover:text-white">❮</a>
+                    <a href="#slide4"
+                        class="btn btn-circle hover:bg-primary hover:border-primary hover:text-white">❯</a>
+                </div>
+            </div>
+
+            <!-- Slide 04 -->
+            <div id="slide4" class="carousel-item relative w-full">
+                <div class="bg-red-400 w-full h-[100%] flex justify-center items-center">
+                    <div class="hero h-full" style="background-image: url(./images/banner4.png);">
+                        <div class="hero-overlay bg-opacity-50"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md text-white">
+                                <h1 class="mb-5 text-5xl font-extrabold">Exotic tastes at your doorstep</h1>
+                                <p class="mb-5">We supply highly quality organic products</p>
+                                <button
+                                    class="btn bg-[#F85559] text-white hover:bg-transparent hover:text-primary hover:border-primary">Shop
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3"
+                        class="btn btn-circle hover:bg-primary hover:border-primary hover:text-white ">❮</a>
+                    <a href="#slide1"
+                        class="btn btn-circle hover:bg-primary hover:border-primary hover:text-white">❯</a>
+                </div>
+            </div>
+        </div>
+
+        <section
+            class="bg-white drop-shadow-lg lg:flex hidden justify-center absolute top-[550px] right-[280px] rounded-lg">
+            <div>
+                <img src="images/fruit1.png" alt="">
+                <h4 class="text-xl font-medium">Grape</h4>
+            </div>
+            <div>
+                <img src="images/fruit2.png" alt="">
+                <h4 class="text-xl font-medium">Orange</h4>
+            </div>
+            <div>
+                <img src="images/fruit3.png" alt="">
+                <h4 class="text-xl font-medium">Mango</h4>
+            </div>
+            <div>
+                <img src="images/fruit4.png" alt="">
+                <h4 class="text-xl font-medium">Strawberry</h4>
+            </div>
+            <div>
+                <img src="images/fruit5.png" alt="">
+                <h4 class="text-xl font-medium">Pomegranate</h4>
+            </div>
+        </section>
+
+    </header>
+    <main>
+        <!-- Deal of the day -->
+        <section class="w-11/12 mx-auto mt-40">
+            <div class="flex justify-between flex-col lg:flex-row">
+                <div>
+                    <h2 class="text-5xl font-extrabold mb-3">Deal of the day</h2>
+                    <p class=" w-72 mb-5 lg:w-full">Contrary to popular belief, is not simply random text. It has roots
+                        in a
+                        piece
+                        of
+                        <br> classicalLatin literature from 45 BC, making it over 2000 years old.
+                    </p>
+                </div>
+                <div class="flex">
+                    <div>
+                        <h2 class="text-5xl font-extrabold">29</h2>
+                        <p>Days</p>
+                    </div>
+                    <div class="mt-4">
+                        <img src="images/Frame3.svg" alt="">
+                    </div>
+                    <div>
+                        <h2 class="text-5xl font-extrabold">15</h2>
+                        <p>Hours</p>
+                    </div>
+                    <div>
+
+                    </div>
+                    <div class="mt-4">
+                        <img src="images/Frame3.svg" alt="">
+                    </div>
+                    <div>
+                        <h2 class="text-5xl font-extrabold">25</h2>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="mt-4">
+                        <img src="images/Frame3.svg" alt="">
+                    </div>
+                    <div>
+                        <h2 class="text-5xl font-extrabold">08</h2>
+                        <p>Seconds</p>
+                    </div>
+                    <div class="mt-4">
+                        <img src="images/Frame3.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- card Deal -->
+        <section class="w-11/12 mx-auto my-12">
+            <div class="grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- card 1 -->
+                <div class="border bg-base-100">
+                    <figure class="pt-5 flex justify-center"><img src="/images/fruit6.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="text-2xl font-semibold text-center">12.90$ - 18.85$</h2>
+                        <p class="bg-slate-200 mx-auto w-[80%]
+                            h-[1px]"></p>
+                        <p class="text-center">Apples</p>
+                        <img src="images/Group 24.svg" alt="">
+
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn text-[#F85559]" onclick="my_modal_1.showModal()">Details</button>
+                        <dialog id="my_modal_1" class="modal">
+                            <div class="modal-box">
+                                <figure class="pt-5 flex justify-center"><img src="/images/fruit6.png" alt="Shoes" />
+                                </figure>
+                                <div class="card-body">
+                                    <h2 class="text-2xl font-semibold text-center">12.90$ - 18.85$</h2>
+                                    <p class="bg-slate-200 mx-auto w-[80%]
+                                    h-[1px]"></p>
+                                    <p class="text-center">Apples</p>
+                                    <img src="images/Group 24.svg" alt="">
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                        </dialog>
+
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class=" border bg-base-100">
+                    <figure class="pt-5 flex justify-center"><img src="/images/fruit7.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="text-2xl font-semibold text-center">12.90$ - 18.85$</h2>
+                        <p class="bg-slate-200 mx-auto w-[80%]
+                            h-[1px]"></p>
+                        <p class="text-center">Orange</p>
+                        <img src="images/Group 24.svg" alt="">
+
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn text-[#F85559]" onclick="my_modal_2.showModal()">Details</button>
+                        <dialog id="my_modal_2" class="modal">
+                            <div class="modal-box">
+                                <figure class="pt-5 flex justify-center"><img src="/images/fruit7.png" alt="Shoes" />
+                                </figure>
+                                <div class="card-body">
+                                    <h2 class="text-2xl font-semibold text-center">12.90$ - 18.85$</h2>
+                                    <p class="bg-slate-200 mx-auto w-[80%]
+                                     h-[1px]"></p>
+                                    <p class="text-center">Apples</p>
+                                    <img src="images/Group 24.svg" alt="">
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                        </dialog>
+
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class=" border bg-base-100">
+                    <figure class="pt-5 flex justify-center"><img src="/images/fruit8.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="text-2xl font-semibold text-center">12.90$ - 18.85$</h2>
+                        <p class="bg-slate-200 mx-auto w-[80%]
+                            h-[1px]"></p>
+                        <p class="text-center">Red Dragon</p>
+                        <img src="images/Group 24.svg" alt="">
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn text-[#F85559]" onclick="my_modal_3.showModal()">Details</button>
+                        <dialog id="my_modal_3" class="modal">
+                            <div class="modal-box">
+                                <figure class="pt-5 flex justify-center"><img src="/images/fruit8.png" alt="Shoes" />
+                                </figure>
+                                <div class="card-body">
+                                    <h2 class="text-2xl font-semibold text-center">12.90$ - 18.85$</h2>
+                                    <p class="bg-slate-200 mx-auto w-[80%]
+                                     h-[1px]"></p>
+                                    <p class="text-center">Apples</p>
+                                    <img src="images/Group 24.svg" alt="">
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                        </dialog>
+
+
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="border bg-base-100">
+                    <figure class="pt-5 flex justify-center"><img src="/images/fruit9.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="text-2xl font-semibold text-center">12.90$ - 18.85$</h2>
+                        <p class="bg-slate-200 mx-auto w-[80%]
+                            h-[1px]"></p>
+                        <p class="text-center">Banana</p>
+                        <img src="images/Group 24.svg" alt="">
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn text-[#F85559]" onclick="my_modal_4.showModal()">Details</button>
+                        <dialog id="my_modal_4" class="modal">
+                            <div class="modal-box">
+                                <figure class="pt-5 flex justify-center"><img src="/images/fruit9.png" alt="Shoes" />
+                                </figure>
+                                <div class="card-body">
+                                    <h2 class="text-2xl font-semibold text-center">12.90$ - 18.85$</h2>
+                                    <p class="bg-slate-200 mx-auto w-[80%]
+                                     h-[1px]"></p>
+                                    <p class="text-center">Apples</p>
+                                    <img src="images/Group 24.svg" alt="">
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                            <!-- if there is a button in form, it will close the modal -->
+                                            <button class="btn">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                        </dialog>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button class="bg-[#F85559] w-20 h-10 rounded-lg text-center text-white my-8">Shop All</button>
+            </div>
+
+
+
+        </section>
+        <!-- meet section -->
+        <section class="w-11/12 mx-auto">
+            <div>
+                <div class="hero lg:h-[500px] bg-cover" style="background-image: url(./images/banner1.png);">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="text-neutral-content">
+                        <div class="text-center">
+                            <h1 class="text-5xl font-bold">Meet the team section</h1>
+                            <p>Contrary to popular belief, is not simply random text. It has roots in a
+                                piece of classical
+                                <br>
+                                Latin literature from 45 BC, making it over 2000 years old.
+                            </p>
+
+                            <div>
+
+
+                            </div>
+
+                        </div>
+                        <!-- meet card -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                            <!-- card 1 -->
+                            <div class="mt-8">
+                                <img class="mx-auto" src="images/member1.png" alt="">
+                                <h3 class="text-base text-center font-bold">Awlad Hossain</h3>
+                                <p class="text-center">Fruits Expert</p>
+                                <div class="flex gap-1 justify-center">
+                                    <img src="images/facebook 1.svg" alt="">
+                                    <img src="images/twitter (1) 1.svg" alt="">
+                                    <img src="images/linkedin 1.svg" alt="">
+                                </div>
+                            </div>
+                            <!-- card 2 -->
+                            <div class="mt-8">
+                                <img class="mx-auto" src="images/member2.png" alt="">
+                                <h3 class="text-base text-center font-bold">Awlad Hossain</h3>
+                                <p class="text-center">Fruits Expert</p>
+                                <div class="flex gap-1 justify-center">
+                                    <img src="images/facebook 1.svg" alt="">
+                                    <img src="images/twitter (1) 1.svg" alt="">
+                                    <img src="images/linkedin 1.svg" alt="">
+                                </div>
+                            </div>
+                            <!-- card 3 -->
+                            <div class="mt-8">
+                                <img class="mx-auto" src="images/member3.png" alt="">
+                                <h3 class="text-base text-center font-bold">Awlad Hossain</h3>
+                                <p class="text-center">Fruits Expert</p>
+                                <div class="flex justify-center gap-1">
+                                    <img src="images/facebook 1.svg" alt="">
+                                    <img src="images/twitter (1) 1.svg" alt="">
+                                    <img src="images/linkedin 1.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <img class="mx-auto" src="images/member4.png" alt="">
+                                <h3 class="text-base text-center font-bold">Awlad Hossain</h3>
+                                <p class="text-center">Fruits Expert</p>
+                                <div class="flex justify-center gap-1">
+                                    <img src="images/facebook 1.svg" alt="">
+                                    <img src="images/twitter (1) 1.svg" alt="">
+                                    <img src="images/linkedin 1.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="w-11/12 mx-auto my-28">
+            <div class="text-center space-y-5">
+                <h2 class="text-4xl font-extrabold">Why Choose Us</h2>
+                <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical
+                    <br>
+                    Latin
+                    literature from 45 BC, making it over 2000 years old.
+                </p>
+            </div>
+
+
+            <div class="mt-20 space-y-10 flex">
+                <div>
+                    <div class="flex gap-4 mt-12">
+                        <div class="bg-slate-300 flex justify-center items-center rounded-full h-12 w-12">
+                            <img src="images/group 1.svg" alt="">
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="text-base font-extrabold">Dedicated Team</h5>
+                            <p class="bg-slate-400 w-20
+                                             h-[1px]"></p>
+                            <p class="pr-5">Professional employees are there for you to pick
+                                <br>
+                                the most amazing and fresh fruits.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-4">
+                        <div class="bg-slate-300 flex justify-center items-center rounded-full h-12 w-12">
+                            <img src="images/love 1.svg" alt="">
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="text-base font-extrabold">Fresh is Best</h5>
+                            <p class="bg-slate-400 w-20
+                                             h-[1px]"></p>
+                            <p class="pr-5">Professional employees are there for you to pick
+                                <br>
+                                the most amazing and fresh fruits.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-4">
+                        <div class="bg-slate-300 flex justify-center items-center rounded-full h-12 w-12">
+                            <img src="images/gift-box 1.svg" alt="">
+                        </div>
+                        <div class="space-y-5">
+                            <h5 class="text-base font-extrabold">Gift Certificates</h5>
+                            <p class="bg-slate-400 w-20
+                                             h-[1px]"></p>
+                            <p class="pr-5">Professional employees are there for you to pick
+                                <br>
+                                the most amazing and fresh fruits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/whychoose1.png" alt="">
+                </div>
+                <div>
+                    <div class="flex gap-4 mt-4">
+                        <div class="space-y-4 ">
+                            <h5 class="text-base text-end font-extrabold">Dedicated Team</h5>
+                            <p class="bg-slate-400 ml-auto w-20
+                                             h-[1px]"></p>
+                            <p class="text-end pl-5">Professional employees are there for you to pick
+                                <br>
+                                the most amazing and fresh fruits.
+                            </p>
+                        </div>
+                        <div class="bg-slate-300 flex justify-center items-center rounded-full h-12 w-12">
+                            <img src="images/group 1.svg" alt="">
+                        </div>
+
+                    </div>
+                    <div class="flex gap-4 mt-4">
+                        <div class="space-y-4 ">
+                            <h5 class="text-base text-end font-extrabold">Dedicated Team</h5>
+                            <p class="bg-slate-400 ml-auto w-20
+                                             h-[1px]"></p>
+                            <p class="text-end pl-5">Professional employees are there for you to pick
+                                <br>
+                                the most amazing and fresh fruits.
+                            </p>
+                        </div>
+                        <div class="bg-slate-300 flex justify-center items-center rounded-full h-12 w-12">
+                            <img src="images/group 1.svg" alt="">
+                        </div>
+
+                    </div>
+                    <div class="flex gap-4 mt-4">
+                        <div class="space-y-4 ">
+                            <h5 class="text-base text-end font-extrabold">Dedicated Team</h5>
+                            <p class="bg-slate-400 ml-auto w-20
+                                             h-[1px]"></p>
+                            <p class="text-end pl-5">Professional employees are there for you to pick
+                                <br>
+                                the most amazing and fresh fruits.
+                            </p>
+                        </div>
+                        <div class="bg-slate-300 flex justify-center items-center rounded-full h-12 w-12">
+                            <img src="images/group 1.svg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
